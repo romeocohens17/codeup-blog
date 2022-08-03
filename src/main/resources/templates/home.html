@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+
+<head th:replace="partials/fragment.html :: head('My Blog')">
     <meta charset="UTF-8">
     <title>Welcome to my website!</title>
 </head>
 <body>
-    <h1>xXWelcome to my Spring blogXx</h1>
 
-<div th:replace="fragment.html :: frag"></div>
+    <nav th:replace="partials/fragment.html :: navbar"></nav>
+    <h1>xX WELCOME TO MY SPRING BLOG Xx</h1>
+    <footer th:replace="partials/fragment.html :: footer"></footer>
 
 </body>
 </html>
