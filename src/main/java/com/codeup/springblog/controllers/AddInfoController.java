@@ -19,5 +19,4 @@ public class AddInfoController {
         model.addAttribute("info", String.format("Did you hear that %s", info));
         return "new-info";
     }
-
 }

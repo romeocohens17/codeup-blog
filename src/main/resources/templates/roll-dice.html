@@ -2,19 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>xXRoll the DiceXx</title>
+    <title>Dice Game</title>
 </head>
 <body>
 
 <h1>xXRoll the DiceXx</h1>
 
-<h3>Your number was: <span th:number="${num}?:'null!'"></span></h3>
-
-<form action="roll-dice" method="post">
-    <label for="number">Guess a number between 1 and 6!</label>
-    <input type="text" name="number" id="number">
-    <button>Submit</button>
-</form>
+<a href="/roll-dice/1">1</a>
+<a href="/roll-dice/2">2</a>
+<a href="/roll-dice/3">3</a>
+<a href="/roll-dice/4">4</a>
+<a href="/roll-dice/5">5</a>
+<a href="/roll-dice/6">6</a>
 
 </body>
 </html>
