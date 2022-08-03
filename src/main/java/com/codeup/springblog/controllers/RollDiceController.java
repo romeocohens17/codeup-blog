@@ -13,11 +13,13 @@ public class RollDiceController {
     @RequestMapping(path = "/roll-dice/{number}", method = RequestMethod.GET)
     @ResponseBody
     public String diceRoll(@PathVariable int number) {
-        int random = (int)(Math.random() * 6) + 1;
-        if(number == random) {
-            return String.format("CONGRATS, YOU WIN!!!\nYour number was: %s\nThe random number was: %s", number, random);
+        int dieOne = (int)(Math.random() * 6) + 1;
+        int dieTwo = (int)(Math.random() * 6) + 1;
+        int dieThree = (int)(Math.random() * 6) + 1;
+        if(number == dieOne || number == dieTwo || number == dieThree) {
+            return String.format("<h2>CONGRATS</h2>\n<h3>Your random number was: %s</h3>\n<h3>You matched a random dice roll</h3>\n<h3>Die One: %s</h3>\n<h3>Die Two: %s</h3>\n<h3>Die Three: %s</h3>", number, dieOne,dieTwo, dieThree);
         } else {
-            return String.format("SORRY, YOU LOSE\nYour number was: %s\nThe random number was: %s", number, random);
+            return String.format("<h2>SORRY, YOU LOSE</h2>\n<h3>Your number was: %s</h3>\n<h3>You didn't match any of the random dice rolls</h3>\n<h3>Die One: %s</h3>\n<h3>Die Two: %s</h3>\n<h3>Die Three: %s</h3>", number, dieOne, dieTwo, dieThree);
         }
     }
 }
